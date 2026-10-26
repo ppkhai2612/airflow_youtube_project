@@ -1,7 +1,5 @@
 # Introduction to Apache Airflow
 
-Link: https://supertype.ai/notes/intro-to-apache-airflow
-
 Apache Airflow is an open-source platform built on Python to programmatically author, schedule, and monitor your pipelines.
 
 ## Installation & Setup
@@ -290,3 +288,7 @@ def greet(ti):
 Now the DAG should run properly. However, the code becomes more complex. This shows yet another advantage of the TaskFlow API, in which you do not need to explicitly implement XComs.
 
 Do take a note that despite its functionality, XCom is meant to be used only for relaying small messages. In fact, it has a maximum size of 48KB. The best practice for implementing communication between tasks is by **utilizing remote storage and database** — a task can store processed data in a remote storage (Amazon S3, Hadoop Distributed File System, Google Cloud Storage, etc) or a database and push the path into XCom, then the downstream tasks can pull the path from the XCom and use it to obtain the data.
+
+## References
+
+- [Introduction to Apache Airflow](https://supertype.ai/notes/intro-to-apache-airflow)
