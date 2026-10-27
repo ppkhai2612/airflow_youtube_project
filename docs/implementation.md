@@ -474,8 +474,7 @@ After the DAG run successfully, open [BigQuery console](https://console.cloud.go
 Notice that earlier we have only installed the dependecies in the `.venv` virtual environment on our local machine. You might be curious how the DAG can run successfully within the Docker environment even though we have not installed any of the dependencies inside the Docker containers. Well, this is because the Docker containers (which are created from the `docker-compose.yaml` file provided by Airflow) come with a set of pre-installed Python libraries by default, which happen to include all of our required dependencies. We can verify this by opening the terminal within the `airflow-worker-1` container and checking if our dependencies are installed using the command below.
 
 ```bash
-docker container exec -it air
-flow_youtube_project-airflow-worker-1 bash
+docker container exec -it airflow_youtube_project-airflow-worker-1 bash
 # In Docker container, run
 pip list | grep -E 'google-api-python-client|python-dotenv|isodate|google-cloud-bigquery'
 ```
