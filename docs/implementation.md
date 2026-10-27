@@ -490,7 +490,11 @@ isodate                                   0.7.2
 python-dotenv                             1.1.1
 ```
 
-## Visualizing the Data in BigQuery using Looker Studio
+## Visualizing the Data in BigQuery using Data Studio
+
+First navigate to [Data Studio](https://datastudio.google.com/). Our initial step is to establish a new connection to BigQuery within Data Studio. To accomplish this, click on the `Create` button on the left panel and select `Data Source`. Then select `BigQuery` as the desired data source. If this is your first time connecting to BigQuery from Data Studio, you may need to click the "Authorize" button. Following that, we'll need to select the appropriate `Project`, `Dataset` and `Table`, then click on the `Connect` button. Finally, click on the `Create Report` button to create a new report, which will be used to create our dashboard.
+
+From there, you can design your own dashboard.
 
 ## References
 
