@@ -1,9 +1,10 @@
+from pathlib import Path
 from google.cloud import bigquery
 from google.oauth2 import service_account
 
-
 # Set the path to your service account key file
-key_path = 'dags/service_account_key.json'
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
+key_path = PROJECT_ROOT / "dags" / "service_account_key.json"
 
 # Set the credentials using the service account key
 credentials = service_account.Credentials.from_service_account_file(
