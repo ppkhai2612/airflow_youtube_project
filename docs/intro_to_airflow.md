@@ -18,13 +18,13 @@ There are 2 ways of installing Airflow on your local machine: using Docker image
 - Download `docker-compose.yaml`
 
     ```bash
-    curl -LfO 'https://airflow.apache.org/docs/apache-airflow/2.6.0/docker-compose.yaml'
+    curl -LfO 'https://airflow.apache.org/docs/apache-airflow/3.0.6/docker-compose.yaml'
     ```
 
 - If you are running Linux OS, you will need to execute these following commands beforehand:
 
     ```bash
-    mkdir ./dags ./logs ./plugins
+    mkdir ./dags ./config ./logs ./plugins
     echo -e "AIRFLOW_UID=$(id -u)" > .env
     ```
 
